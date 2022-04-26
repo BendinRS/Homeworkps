@@ -1,6 +1,8 @@
 echo "ps ax na minimalkah"
-echo --------  -------  ------- $'\t' -------
+
 echo PID $'\t' PPID $'\t' STATE $'\t'$'\t' COMMAND
+echo --------  -------  ------- $'\t' -------
+
 for numpc in /proc/[0-9]*
 do
 a=$(cat $numpc/status | grep -E ^Pid | awk '{print $2}')
